@@ -148,6 +148,8 @@ struct flb_tls_context *flb_tls_context_new(int verify,
         ctx->certs_set |= FLB_TLS_PRIV_KEY;
     }
 
+    flb_info("[tls] Initialized TLS context with ca path %s", ca_path);
+
     return ctx;
 
  error:
